@@ -1,0 +1,6 @@
+Para correr este proyecto debes instalarte:
+
+
+Flask - http://flask.pocoo.org
+Sqlalchemy - http://www.sqlalchemy.org
+Flask-SQLAlchemy - http://packages.python.org/Flask-SQLAlchemy/index.html
