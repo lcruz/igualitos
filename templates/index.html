@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+	<span id="slogan2">a plain and simple free design</span>
+	{% for data in igualitos %}
+	<h3>{{data.name}}</span></h3>
+	<div class="box" >
+		<div class="box_inner" >	
+			<div class="captioned_image">
+				<img width="120" src="/static/images/pic.jpg" alt="Figure 1" />
+			
+			</div>
+			<div class="captioned_image">
+				<img width="120" src="/static/images/pic.jpg" alt="Figure 1" />
+			
+			</div>
+				
+		</div>
+	</div>
+	{% endfor %}
+	
+{% endblock %}

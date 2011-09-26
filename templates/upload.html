@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+
+<h3>Carga.<span>imagenes</span></h3>
+<p>
+	Favor selecciona las imagenes de dos personas que creas se parecen.  Si tu comparación es buena la publicaremos en nuestro sitio web al brevedad.
+</p>
+<form method="POST" enctype="multipart/form-data">
+	Nombre del personaje<br/>
+	<input type="text" name="name"><br/>&nbsp;<br/>
+	Foto del personaje<br/>
+	<input type="file" name="pic1"><br/>&nbsp;<br/>Se parece a este famoso<br/>
+	<input type="file" name="pic2"><br>&nbsp;<br/><input type="submit" value="Cargar">
+</form>
+{% endblock %}

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Igualitos</title>
+<link href="{{ url_for('static', filename='default.css')}}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+
+<div id="header">
+	<div id="header_inner">
+		<h1><span>igualitos.</span>IMIT</h1>
+		<div id="slogan">Todos tenemos un doble en esta vida</div>
+	</div>
+</div>
+
+<div id="main">
+
+	<div id="lcol">
+		<div id="menu">
+			<ul>
+				<li><a href="/">Home<span></span></a></li>
+				<li><a href="/upload">Cargar<span></span></a></li>
+				<li><a href="#">About Me<span></span></a></li>
+			</ul>
+		</div>
+		<div id="menu_end"></div>
+
+		<div id="lcontent">
+			<h3 class="first">&uacute;timos.<span>cargados</span></h3>
+			<ul class="divided">
+				{% for i in ultimos%}
+				{% if loop.first %}
+				<li class="first"><a href="#">{{i.name}}</a></li>
+				{% else %}
+				<li><a href="#">{{i.name}}</a></li>
+				{% endif%}
+				{% endfor %}
+			</ul>
+		<!--
+			<h3>&uacute;timos.<span>comentarios</span></h3>
+			<p><a href="#">Sollicitudin sed</a> arcu et vivamus viverra. Nullam turpis. Vestibulum Nullam turpis vestibulum.</p>	
+			<div class="divider"></div>
+
+			<p><a href="#">Vestibulum veroeros</a> sed arcu et vivamus viverra lorem ipsum dolor sit amet dolore nulla facilisi.</p>--><p/>&nbsp;<p/>
+		</div>
+
+	</div>
+
+	<div id="rcol">
+		<div id="rcontent">
+			<h1>Igualitos<span>.IMIT</span></h1>
+			<span id="slogan2">¿y tú a quien te pareces?</span>
+		    {% block content %}
+			
+			<span id="slogan2">a plain and simple free design</span>
+	
+			<div class="box">
+				<div class="box_inner">	
+					<div class="captioned_image">
+						<img src="/static/images/pic.jpg" alt="Figure 1" />
+						<div>Fig 1. Obscure?</div>
+					</div>
+					<h2>Some obscure headline</h2>
+					<p>Sollicitudin et, arcu. Vivamus viverra. Nullam turpis. Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor.  Nullam turpis. Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor.</p>		
+				</div>
+			</div>
+
+			<h3>Obscure.<span>Explanations</span></h3>
+			<p><strong>Curiously Green</strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> for <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>, released for free under the <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5</a> license. The photos in this design are from <a href="http://www.pdphoto.org/">PDPhoto.org</a>. You're free to use this template for anything as long as you link back to <a href="http://www.freecsstemplates.org/">my site</a>. Enjoy :)</p>
+
+			<p>Be sure to check out some of my commercial work over at <a href="http://www.4templates.com/?aff=n33">4Templates</a>.</p>
+			<div class="divider"></div>
+			<div class="summary">Lorem ipsum dolor sit amet nullam dignissim</div>
+
+			<h3>Tincidunt.Sed.<span>Vestibulum</span></h3>
+			<p>
+				Quisque suscipit, quam vel aliquet tincidunt, eros nisi ultrices urna, a interdum est purus vitae leo.
+				Pellentesque a lectus et tortor tincidunt <a href="#">dignissim etiam</a>. Aliquam erat volutpat. Quisque
+				risus nunc, eleifend gravida, ullamcorper non, gravida ut, nulla.
+			</p>
+			{% endblock %}
+		</div>
+	</div>
+
+</div>
+
+<div id="footer">
+	&copy; 2006 My.Website. All rights reserved. Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> + <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+</div>
+
+</body>
+</html>

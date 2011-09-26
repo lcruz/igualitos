@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<h3>carga.<span>exitosa</span></h3>
+	<p><strong>Enhorabuena!</strong>, las imagenes cargadas ya han sido subidas!<div class="captioned_image">
+			<img width="200" src="/uploads/{{request.args['file1']}}" alt="Figure 1" />
+		<!--	<div>Fig 1. {{request.args['file1']}}</div>-->
+		</div>
+			<div class="captioned_image">
+					<img width="200" src="/uploads/{{request.args['file2']}}" alt="Figure 1" />
+			
+			</div></p>
+{% endblock %}
